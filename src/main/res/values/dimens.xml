@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="prefer_view_height">48dp</dimen>
+    <dimen name="max_view_height">64dp</dimen>
+    <dimen name="prefer_line_spacing">8dp</dimen>
+    <dimen name="prefer_view_padding_vertical">8dp</dimen>
+    <dimen name="prefer_view_padding_vertical_minus">-8dp</dimen>
+    <dimen name="prefer_view_padding_horizontal_minus">-16dp</dimen>
+    <dimen name="prefer_view_padding_horizontal">16dp</dimen>
+    <dimen name="prefer_inner_padding_horizontal">32dp</dimen>
+    <dimen name="prefer_slide_width">300dp</dimen>
+    <dimen name="prefer_slide_header_height">185.4dp</dimen>
+    <dimen name="prefer_header_image_size">70dp</dimen>
+    <dimen name="prefer_appbar_layout_height">250dp</dimen>
+    <dimen name="prefer_appbar_margin_top">35dp</dimen>
+    <dimen name="text_view_bottom_line_horizontal">5dp</dimen>
+
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_biggest">26sp</dimen>
+
+    <dimen name="divider_line_width">1px</dimen>
+</resources>

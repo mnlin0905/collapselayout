@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="CollapseLayout">
+        <attr name="CollapseLayout_parent" format="reference"/>
+    </declare-styleable>
+
+</resources>

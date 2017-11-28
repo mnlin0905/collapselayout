@@ -1,0 +1,11 @@
+<resources>>
+    <style name="TextViewStandard">
+        <item name="android:drawablePadding">@dimen/prefer_inner_padding_horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:paddingLeft">@dimen/prefer_view_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/prefer_view_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/prefer_view_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/prefer_view_padding_vertical</item>
+    </style>
+</resources>

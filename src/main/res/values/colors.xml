@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPrimaryHacker">#373B3E</color>
+    <color name="colorPrimaryDarkHacker">#2D3134</color>
+    <color name="colorAccentHacker">#4c4a48</color>
+
+
+    <color name="colorControlNormal">#333333</color>
+    <color name="navigationBarColor">#4C4C4C</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="text_black">#ff1c1d16</color>
+    <color name="color_black">#FF111111</color>
+    <color name="gray">#ffaaaaaa</color>
+    <color name="text_link_hacker">#589DF6</color>
+    <color name="text_label_hacker">#009688</color>
+    <color name="little_gray">#FFEEEEEE</color>
+    <color name="dark_gray">#4C4C4C</color>
+    <color name="red">#ffff0000</color>
+    <color name="white">#ffffffff</color>
+    <color name="text_hint_hacker">#aaffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_gray">#aaaaaaaa</color>
+    <color name="transparent_little_gray">#AAEEEEEE</color>
+    <color name="dark">#2c2d26</color>
+    <color name="color_green">#2EC047</color>
+    <color name="color_yellow">#EE8527</color>
+    <color name="color_blue">#50ABF6</color>
+
+    <color name="color_divider_line">#aaaaaaaa</color>
+
+</resources>
