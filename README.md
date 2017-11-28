@@ -1,5 +1,6 @@
 # CollapseLayout
 [![License](https://img.shields.io/aur/license/yaourt.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
+[ ![Download](https://api.bintray.com/packages/lovingning/maven/CollapseLayout/images/download.svg) ](https://bintray.com/lovingning/maven/CollapseLayout/_latestVersion)
 
 `
 一款可折叠的、简单的布局；继承LinearLayout，由两个子TextView组成；可用于一般ViewGroup、ListView、RecyclerView中
@@ -9,6 +10,18 @@
 ```
 compile 'com.knowledge.mnlin:CollapseLayout:0.0.1'{
     exclude module: "support-annotations"
+}
+```
+如果提示找不到依赖文件，可能时jcenter未及时通过，可以依赖私人仓库
+```
+//Project的build.gradle文件
+allprojects {
+    repositories {
+    
+        ... 
+        
+        maven { url "https://dl.bintray.com/lovingning/maven"}
+    }
 }
 ```
 

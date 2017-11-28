@@ -20,31 +20,55 @@ import android.widget.TextView;
  * <p>
  * Created by MNLIN on 2017/11/20.
  */
-
 public class CollapseLayout extends LinearLayout implements View.OnClickListener {
+    /**
+     * 上下文
+     */
     private Context context;
-    private AttributeSet attrs;
-    private TextView tv_title, tv_content;
 
-    //展开状态应当的高度/折叠状态应当具有的高度
+    /**
+     * view参数
+     */
+    private AttributeSet attrs;
+
+    /**
+     * 折叠布局中的标题和内容
+     */
+    private TextView mTvTitle, mTvContent;
+
+    /**
+     * 展开状态应当的高度
+     * 折叠状态应当具有的高度
+     * 当前高度：（最大 - 最小高度）* 当前比例
+     */
     private int unfoldHeight;
     private int foldHeight;
     private float currentHeight;
 
-    //是否处于折叠状态
+    /**
+     * 是否处于折叠状态
+     */
     private boolean isCollapsed = true;
 
-    //是否是第一次初始化视图
+    /**
+     * 是否是第一次初始化视图
+     */
     private boolean isFirstLayout = true;
 
-    //设置动画时间
+    /**
+     * 设置动画时间
+     */
     private long collapseTime = 400;
     private long expandTime = 400;
 
-    //父布局的id
+    /**
+     * 父布局的id
+     */
     private ViewGroup parent;
 
-    //动画是否同时开始
+    /**
+     * 动画是否同时开始
+     */
     private boolean together;
 
     public CollapseLayout(Context context) {
@@ -78,7 +102,7 @@ public class CollapseLayout extends LinearLayout implements View.OnClickListener
         //设定自身高度为标题的高度
         if (unfoldHeight == 0 && foldHeight == 0) {
             unfoldHeight = getMeasuredHeight();
-            foldHeight = tv_title.getMeasuredHeight();
+            foldHeight = mTvTitle.getMeasuredHeight();
         }
         setMeasuredDimension(getMeasuredWidth(), foldHeight + (int) (currentHeight * (unfoldHeight - foldHeight)));
     }
@@ -98,8 +122,8 @@ public class CollapseLayout extends LinearLayout implements View.OnClickListener
         }
         setOrientation(VERTICAL);
 
-        tv_title = findViewById(R.id.tv_title);
-        tv_content = findViewById(R.id.tv_content);
+        mTvTitle = findViewById(R.id.tv_title);
+        mTvContent = findViewById(R.id.tv_content);
 
         /*
         * 获取布局的框架父管理布局
@@ -211,8 +235,8 @@ public class CollapseLayout extends LinearLayout implements View.OnClickListener
      * 设置标题和内容
      */
     public CollapseLayout setTitleAndContent(CharSequence title, CharSequence content) {
-        tv_title.setText(title);
-        tv_content.setText(content);
+        mTvTitle.setText(title);
+        mTvContent.setText(content);
         return this;
     }
 
@@ -220,8 +244,8 @@ public class CollapseLayout extends LinearLayout implements View.OnClickListener
      * 设置标题和内容
      */
     public CollapseLayout setTitleAndContent(@StringRes int title, @StringRes int content) {
-        tv_title.setText(getContext().getResources().getString(title));
-        tv_content.setText(getContext().getResources().getString(content));
+        mTvTitle.setText(getContext().getResources().getString(title));
+        mTvContent.setText(getContext().getResources().getString(content));
         return this;
     }
 
@@ -229,7 +253,7 @@ public class CollapseLayout extends LinearLayout implements View.OnClickListener
      * 设置标题
      */
     public CollapseLayout setTitle(CharSequence title) {
-        tv_title.setText(title);
+        mTvTitle.setText(title);
         return this;
     }
 
@@ -237,7 +261,7 @@ public class CollapseLayout extends LinearLayout implements View.OnClickListener
      * 设置内容
      */
     public CollapseLayout setContent(CharSequence content) {
-        tv_content.setText(content);
+        mTvContent.setText(content);
         return this;
     }
 
@@ -255,14 +279,14 @@ public class CollapseLayout extends LinearLayout implements View.OnClickListener
      * 获取标题view
      */
     public TextView getTitleView() {
-        return tv_title;
+        return mTvTitle;
     }
 
     /**
      * 获取内容view
      */
     public TextView getContentView() {
-        return tv_title;
+        return mTvTitle;
     }
 
 
@@ -283,7 +307,15 @@ public class CollapseLayout extends LinearLayout implements View.OnClickListener
         return currentHeight;
     }
 
+    /**
+     * 自定义callback，用于处理回调事件
+     * 私有，外部无法访问
+     */
     private interface Callback {
+
+        /**
+         * 回调时具体的执行逻辑
+         */
         void run();
     }
 
