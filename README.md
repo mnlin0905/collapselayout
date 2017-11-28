@@ -1,8 +1,10 @@
-#CollapseLayout
+# CollapseLayout
 [![License](https://img.shields.io/aur/license/yaourt.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
-[![Version](https://img.shields.io/github/release/qubyte/rubidium.svg) ](https://bintray.com/lovingning/maven/CollapseLayout/_latestVersion)
-`一款可折叠的、简单的布局；由两个TextView组成；可用于一般ViewGroup、ListView、RecyclerView中`
-##准备步骤
+
+`
+一款可折叠的、简单的布局；继承LinearLayout，由两个子TextView组成；可用于一般ViewGroup、ListView、RecyclerView中
+`
+## 准备步骤
 在项目**build.gradle**中添加依赖：
 ```
 compile 'com.knowledge.mnlin:CollapseLayout:0.0.1'{
@@ -10,7 +12,7 @@ compile 'com.knowledge.mnlin:CollapseLayout:0.0.1'{
 }
 ```
 
-##简单使用
+## 简单使用
 在ViewGroup（如LinearLayout）中添加CollapseLayout布局；
 为CollapseLayout添加**CollapseLayout_parent**属性（父布局id），就可以自动展开与折叠；
 ```
@@ -36,7 +38,7 @@ compile 'com.knowledge.mnlin:CollapseLayout:0.0.1'{
         app:CollapseLayout_parent="@id/parent"/>
 </LinearLayout>
 ```
-##控制多个展开与缩放的“组”
+## 控制多个展开与缩放的“组”
 第一组为LinearLayout；第二组为ListView；第三组为RecyclerView；
 设置LinearLayout组中CollapseLayout_parent为“根”父布局；
 ```
@@ -141,7 +143,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
 
 此时第二组与第三组折叠展开互不影响；第一组折叠时则会影响第二第三组数据。
 
-##填充数据与设置显示效果
+## 填充数据与设置显示效果
 在创建CollapseLayout对象时：
  1. 可以控制展开与折叠动画同时进行或者是分开执行。
  1. 可以更改设定“父”布局
