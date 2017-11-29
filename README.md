@@ -8,7 +8,7 @@
 ## 准备步骤
 在项目**build.gradle**中添加依赖：
 ```
-compile 'com.knowledge.mnlin:CollapseLayout:0.0.1'{
+compile 'com.knowledge.mnlin:collapselayout:0.0.1'{
     exclude module: "support-annotations"
 }
 ```
