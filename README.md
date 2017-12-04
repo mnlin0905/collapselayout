@@ -1,6 +1,6 @@
 # CollapseLayout
 [![License](https://img.shields.io/aur/license/yaourt.svg)](http://www.gnu.org/licenses/gpl-3.0.html)
-[ ![Download](https://api.bintray.com/packages/lovingning/maven/CollapseLayout/images/download.svg) ](https://bintray.com/lovingning/maven/CollapseLayout/_latestVersion)
+[![Download](https://api.bintray.com/packages/lovingning/maven/collapseLayout/images/download.svg) ](https://bintray.com/lovingning/maven/collapseLayout/_latestVersion)
 
 `
 一款可折叠的、简单的布局；继承LinearLayout，由两个子TextView组成；可用于一般ViewGroup、ListView、RecyclerView中
