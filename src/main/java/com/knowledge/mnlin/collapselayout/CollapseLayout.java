@@ -5,9 +5,11 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.annotation.IdRes;
 import android.support.annotation.Keep;
+import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.util.AttributeSet;
 import android.view.View;
@@ -286,9 +288,26 @@ public class CollapseLayout extends LinearLayout implements View.OnClickListener
      * 获取内容view
      */
     public TextView getContentView() {
-        return mTvTitle;
+        return mTvContent;
     }
 
+    /**
+     * 设置控件中，title，content，parent的background
+     *
+     * 值可以为空，为空表示背景不做修改
+     */
+    public CollapseLayout setViewBackground(@Nullable  Drawable titleDrawable,@Nullable Drawable contentDrawable,@Nullable Drawable parentDrawable){
+        if(titleDrawable!=null){
+            mTvTitle.setBackground(titleDrawable);
+        }
+        if(contentDrawable!=null){
+            mTvContent.setBackground(contentDrawable);
+        }
+        if(parentDrawable!=null){
+            setBackground(parentDrawable);
+        }
+        return this;
+    }
 
     /**
      * 动态改变布局的高度处理
