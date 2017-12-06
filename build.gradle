@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-def siteUrl = 'https://github.com/lovingning/CollapseLayout'    // project homepage
-def gitUrl = 'https://github.com/lovingning/CollapseLayout.git' // project git
+def siteUrl = 'https://github.com/lovingning/collapselayout'    // project homepage
+def gitUrl = 'https://github.com/lovingning/collapselayout.git' // project git
 
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
@@ -13,7 +13,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "CollapseLayout"
+        name = "collapselayout"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["GPL-3.0"]
@@ -21,7 +21,7 @@ bintray {
     }
 }
 
-version = "0.0.1"
+version = "0.0.2"
 
 group = "com.knowledge.mnlin"
 
@@ -71,7 +71,7 @@ install {
         pom {
             project {
                 packaging 'aar'
-                name 'CollapseLayout_For_Android'
+                name 'collapselayout_For_Android'
                 url siteUrl
                 // Set your license
                 licenses {
